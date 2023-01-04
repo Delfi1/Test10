@@ -30,6 +30,7 @@ anchor_bottom = 1.0
 color = Color( 0, 0, 0, 0.352941 )
 
 [node name="Settings" type="ColorRect" parent="Control/ColorRect2"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -100,6 +101,7 @@ custom_fonts/font = ExtResource( 1 )
 text = "Full screen"
 
 [node name="Info" type="ColorRect" parent="Control/ColorRect2/Settings"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 200.0
@@ -146,7 +148,6 @@ text = "Update"
 [node name="HTTPRequest" type="HTTPRequest" parent="Control/ColorRect2/Settings"]
 
 [node name="Menu" type="ColorRect" parent="Control/ColorRect2"]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
