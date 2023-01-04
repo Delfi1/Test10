@@ -18,7 +18,7 @@ onready var Check = get_node("Info/Check")
 
 onready var UButton = get_node("Info/Update")
 
-onready var ver = "0.0.3"
+onready var ver = "0.0.4"
 
 onready var Sver = null
 
