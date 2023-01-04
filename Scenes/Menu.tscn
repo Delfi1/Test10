@@ -90,6 +90,7 @@ margin_right = 3.0
 color = Color( 0, 0, 0, 0.431373 )
 
 [node name="Info" type="ColorRect" parent="Control/ColorRect2/Settings"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 200.0
@@ -121,6 +122,17 @@ margin_right = -10.0
 margin_bottom = 36.0
 custom_fonts/font = ExtResource( 1 )
 text = "Check Update"
+
+[node name="Update" type="Button" parent="Control/ColorRect2/Settings/Info"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -80.0
+margin_top = 43.0
+margin_right = -10.0
+margin_bottom = 69.0
+custom_fonts/font = ExtResource( 1 )
+disabled = true
+text = "Update"
 
 [node name="HTTPRequest" type="HTTPRequest" parent="Control/ColorRect2/Settings"]
 
@@ -205,6 +217,7 @@ wait_time = 3.0
 [connection signal="pressed" from="Control/ColorRect2/Settings/Sidebar/Info" to="Control/ColorRect2/Settings" method="_on_Info_pressed"]
 [connection signal="pressed" from="Control/ColorRect2/Settings/Sidebar/Back" to="Control/ColorRect2/Settings" method="_on_Back_pressed"]
 [connection signal="pressed" from="Control/ColorRect2/Settings/Info/Check" to="Control/ColorRect2/Settings" method="_on_Check_pressed"]
+[connection signal="pressed" from="Control/ColorRect2/Settings/Info/Update" to="Control/ColorRect2/Settings" method="_on_Update_pressed"]
 [connection signal="pressed" from="Control/ColorRect2/Menu/Settings" to="Control/ColorRect2/Menu" method="_on_Settings_pressed"]
 [connection signal="pressed" from="Control/ColorRect2/Menu/Exit" to="Control/ColorRect2/Menu" method="_on_Exit_pressed"]
 [connection signal="timeout" from="Control/ColorRect2/Label/Timer" to="Control/ColorRect2/Label" method="_on_Timer_timeout"]
