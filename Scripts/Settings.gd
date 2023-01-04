@@ -18,7 +18,7 @@ onready var Check = get_node("Info/Check")
 
 onready var UButton = get_node("Info/Update")
 
-onready var ver = "0.0.4"
+onready var ver = "0.0.5"
 
 onready var Sver = null
 
@@ -80,7 +80,7 @@ func _on_Update_pressed():
 	_download.connect("request_completed", self, "_on_download_completed")
 	Check.disabled = true
 	UButton.disabled = true
-	_download.set_download_file("the_thing.png")
+	_download.set_download_file("Test10.pck")
 	_download.request("https://github.com/Delfi1/Test10/blob/master/Export/Test10.pck?raw=true")
 
 func _on_download_completed(result, response_code, headers, body):
