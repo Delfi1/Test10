@@ -12,7 +12,7 @@ func _ready():
 	Menu.visible = false
 	Settings.visible = false
 	# 3) Включение таймера
-	timer.start(1.9)
+	timer.start(1.5)
 	
 func _on_Timer_timeout():
 	# 4) Остановка таймера
