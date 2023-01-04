@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Resources/DFKMS.res" type="DynamicFont" id=1]
 [ext_resource path="res://Files/Fonts/Kenney/Kenney Mini Square.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/World.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Settings.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Graphics.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 2 )
@@ -88,6 +89,15 @@ anchor_bottom = 1.0
 margin_left = 200.0
 margin_right = 3.0
 color = Color( 0, 0, 0, 0.431373 )
+script = ExtResource( 6 )
+
+[node name="FullScreen" type="CheckButton" parent="Control/ColorRect2/Settings/Graphics"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 190.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 1 )
+text = "Full screen"
 
 [node name="Info" type="ColorRect" parent="Control/ColorRect2/Settings"]
 visible = false
