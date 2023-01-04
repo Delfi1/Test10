@@ -6,7 +6,7 @@ onready var Settings = get_parent().get_node("Settings")
 
 func _ready():
 	# Включение игры: 1) Установка названия окна
-	OS.set_window_title("World")
+	OS.set_window_title("Delfi:World")
 	# 2) Изменение видимости окон:
 	self.visible = true
 	Menu.visible = false

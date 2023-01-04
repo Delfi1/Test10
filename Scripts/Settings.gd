@@ -18,7 +18,7 @@ onready var Check = get_node("Info/Check")
 
 onready var UButton = get_node("Info/Update")
 
-onready var ver = "0.0.5"
+onready var ver = "0.0.6"
 
 onready var Sver = null
 
@@ -27,6 +27,7 @@ onready var _request = get_node("HTTPRequest")
 onready var _download = get_node("HTTPRequest")
 
 func _ready():
+	_on_Graphics_pressed()
 	Version.text = "Version: " + ver
 	_request.connect("request_completed", self, "_on_request_completed")
 
@@ -53,13 +54,11 @@ func disable(Other : Button):
 	Graphics.visible = false
 	IButton.pressed = false
 	Info.visible = false
-	if Other != null:
-		Other.pressed = true
+	Other.pressed = true
 	
 func back():
 	self.visible = false
 	Menu.visible = true
-	disable(null)
 
 func _on_Check_pressed():
 	_request.connect("request_completed", self, "_on_request_completed")
