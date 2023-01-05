@@ -16,7 +16,7 @@ onready var Server_Ver = get_node("Info/Server_Version")
 
 var Maker = "res://Scenes/Maker.tscn"
 
-onready var ver = "0.1.3"
+onready var ver = "0.1.5"
 
 onready var Sver = null
 
@@ -30,7 +30,10 @@ var path = OS.get_executable_path()
 
 onready var RButton = get_node("Info/Reload")
 
+onready var timer = get_node("Info/Timer")
+
 func _ready():
+	timer.connect("timeout", self, "_on_timer_timeout")
 	$Info/HTTPRequest.connect("request_completed", self, "_on_download_completed")
 	$HTTPRequest.connect("request_completed", self, "_on_request_completed")
 	_on_Graphics_pressed()
@@ -90,7 +93,11 @@ func _on_download_completed(result, response_code, headers, body):
 	Check.disabled = false
 	UButton.disabled = false
 	RButton.disabled = false
-	get_tree().reload_current_scene()
+	timer.start(5)
 
 func _on_Reload_pressed():
-	get_tree().reload_current_scene()
+	get_tree().quit_on_go_back()
+
+func _on_timer_timeout():
+	timer.stop()
+	get_tree().quit_on_go_back()

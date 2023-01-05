@@ -55,6 +55,8 @@ func _process(delta):
 	
 func _input(event):
 	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_F11:
+			OS.window_fullscreen = !OS.window_fullscreen
 		if event.scancode == KEY_ESCAPE:
 			get_tree().change_scene(Menu)
 		if event.scancode == KEY_R:
