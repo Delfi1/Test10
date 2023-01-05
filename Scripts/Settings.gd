@@ -16,7 +16,7 @@ onready var Server_Ver = get_node("Info/Server_Version")
 
 var Maker = "res://Scenes/Maker.tscn"
 
-onready var ver = "0.0.9"
+onready var ver = "0.1.0"
 
 onready var Sver = null
 
@@ -27,6 +27,8 @@ onready var UButton = get_node("Info/Update")
 var dir = Directory.new()
 
 var path = OS.get_executable_path()
+
+onready var RButton = get_node("Info/Reload")
 
 func _ready():
 	$Info/HTTPRequest.connect("request_completed", self, "_on_download_completed")
@@ -87,4 +89,8 @@ func _on_Update_pressed():
 func _on_download_completed(result, response_code, headers, body):
 	Check.disabled = false
 	UButton.disabled = false
+	RButton.disabled = false
+	get_tree().reload_current_scene()
+
+func _on_Reload_pressed():
 	get_tree().reload_current_scene()
