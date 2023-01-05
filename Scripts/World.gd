@@ -4,6 +4,7 @@ onready var timer = get_node("Timer")
 onready var Menu = get_parent().get_node("Menu")
 onready var Settings = get_parent().get_node("Settings")
 onready var FS = get_parent().get_node("Settings/Graphics/FullScreen")
+onready var VS = get_parent().get_node("Settings/Graphics/Vsync")
 
 func _ready():
 	
@@ -27,3 +28,4 @@ func _on_Timer_timeout():
 	
 func _load():
 	FS.pressed = OS.window_fullscreen
+	VS.pressed = OS.vsync_enabled
