@@ -16,7 +16,7 @@ onready var Server_Ver = get_node("Info/Server_Version")
 
 var Maker = "res://Scenes/Maker.tscn"
 
-onready var ver = "0.0.8"
+onready var ver = "0.0.9"
 
 onready var Sver = null
 
