@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Box_Choosen.png-b2212f007bc30f55c442d43afe9082dc.stex"
+path="res://.import/Border.png-e4bfdde1a27d4e83e4d0c0ea1e7fb45c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Files/Sprites/Box_Choosen.png"
-dest_files=[ "res://.import/Box_Choosen.png-b2212f007bc30f55c442d43afe9082dc.stex" ]
+source_file="res://Files/Sprites/Border.png"
+dest_files=[ "res://.import/Border.png-e4bfdde1a27d4e83e4d0c0ea1e7fb45c.stex" ]
 
 [params]
 
