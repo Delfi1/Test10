@@ -5,7 +5,7 @@
 [ext_resource path="res://Scripts/World.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Settings.gd" type="Script" id=5]
-[ext_resource path="res://Scenes/Graphics.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Graphics.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=2]
 size = 32
