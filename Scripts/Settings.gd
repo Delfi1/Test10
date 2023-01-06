@@ -14,9 +14,7 @@ onready var Version = get_node("Info/Version")
 
 onready var Server_Ver = get_node("Info/Server_Version")
 
-var Maker = "res://Scenes/Maker.tscn"
-
-onready var ver = "0.1.5"
+onready var ver = "0.1.7"
 
 onready var Sver = null
 
@@ -69,7 +67,7 @@ func back():
 	Menu.visible = true
 
 func _on_Create_pressed():
-	get_tree().change_scene(Maker)
+	get_tree().change_scene("res://Scenes/Editor.tscn")
 
 func _on_Check_pressed():
 	Check.disabled = true
